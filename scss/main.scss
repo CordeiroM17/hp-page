@@ -1,0 +1,30 @@
+/* VARIABLES */
+
+$color-body: #1E1E2C;
+$icon-color: #FFFFFF;
+$sidebar-color: #2D2D44;
+$color-primary: #11678b;
+$color-icon-light: #cacaca;
+$toogle-color: #DDDDDD;
+$text-color: #FFFFFF;
+
+/* $color-body: #E4E9F7;
+$icon-color: #000000;
+$sidebar-color: #FFFFFF;
+$color-primary: #695CFE;
+$color-primary-light: #F6F5FF;
+$toogle-color: #DDDDDD;
+$text-color: #707070; */
+
+$tran-01: all 0.2s ease;
+$tran-02: all 0.3s ease;
+$tran-03: all 0.4s ease;
+$tran-04: all 0.5s ease;
+
+/* IMPORT STYLES */
+
+@import "general";
+
+@import "sidebar";
+
+@import "home";

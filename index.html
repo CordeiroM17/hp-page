@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Css Only -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <input type="checkbox" id="toggle">
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="images/logo.png" alt="Logotipo">
+                </span>
+                <div class="header-text text">
+                    <span class="name">Cariano</span>
+                    <span class="profession">FrontEnd</span>
+                </div>
+            </div>
+            <label class="toggler" for="toggle">
+                <i class="bi bi-arrow-right-short toggle"></i>
+            </label>
+        </header>
+        <div class="menu-bar">
+            <ul class="menu">
+                <li class="nav-link">
+                    <a href="#home">
+                        <i class="bi bi-house-door-fill"></i>
+                        <span class="text nav-text">Home</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#about-me">
+                        <i class="bi bi-person-fill"></i>
+                        <span class="text nav-text">About Me</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#projects">
+                        <i class="bi bi-book-half"></i>
+                        <span class="text nav-text">Projects</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#contact-me">
+                        <i class="bi bi-info-square-fill"></i>
+                        <span class="text nav-text">Contact Me</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="social-media-bar">
+            <div class="social-media-icons">
+                <a href=""><i class="bi bi-github"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-whatsapp"></i></a>
+                <a href=""><i class="bi bi-discord"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container home">
+        <article class="home-container">
+            <h1>Name and surname</h1>
+            <h2>profession</h2>
+        </article>
+    </section>
+
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

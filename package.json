@@ -13,5 +13,9 @@
   "devDependencies": {
     "node-sass": "^8.0.0",
     "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "bootstrap-icons": "^1.10.2"
   }
 }

@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+
+    <!-- SIDEBAR -->
+
     <input type="checkbox" id="toggle">
     <nav class="sidebar close">
         <header>
@@ -20,59 +23,219 @@
                     <img src="images/logo.png" alt="Logotipo">
                 </span>
                 <div class="header-text text">
-                    <span class="name">Cariano</span>
-                    <span class="profession">FrontEnd</span>
+                    <span class="title-logo">HP</span>
+                    <span class="subtitle-logo">Oficial</span>
                 </div>
+                <label class="toggler" for="toggle">
+                    <i class="bi bi-arrow-left-short toggle"></i>
+                </label>
             </div>
-            <label class="toggler" for="toggle">
-                <i class="bi bi-arrow-right-short toggle"></i>
-            </label>
+            <div class="menu-bar">
+                <ul class="menu">
+                    <li class="nav-link">
+                        <a href="#home">
+                            <i class="bi bi-house-door-fill"></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#shop">
+                            <i class="bi bi-pc-display"></i>
+                            <span class="text nav-text">Shop</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#contact-us">
+                            <i class="bi bi-info-square-fill"></i>
+                            <span class="text nav-text">Contact Us</span>
+                        </a>
+                    </li>
+                    <li id="mode">
+                        <div class="toggle-dark-light">
+                            <i class="bi bi-moon-fill moon"></i>
+                            <i class="bi bi-brightness-high-fill sun"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </header>
-        <div class="menu-bar">
-            <ul class="menu">
-                <li class="nav-link">
-                    <a href="#home">
-                        <i class="bi bi-house-door-fill"></i>
-                        <span class="text nav-text">Home</span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="#about-me">
-                        <i class="bi bi-person-fill"></i>
-                        <span class="text nav-text">About Me</span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="#projects">
-                        <i class="bi bi-book-half"></i>
-                        <span class="text nav-text">Projects</span>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <a href="#contact-me">
-                        <i class="bi bi-info-square-fill"></i>
-                        <span class="text nav-text">Contact Me</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
         <div class="social-media-bar">
             <div class="social-media-icons">
-                <a href=""><i class="bi bi-github"></i></a>
                 <a href=""><i class="bi bi-instagram"></i></a>
                 <a href=""><i class="bi bi-whatsapp"></i></a>
-                <a href=""><i class="bi bi-discord"></i></a>
+                <a href=""><i class="bi bi-twitter"></i></a>
             </div>
         </div>
     </nav>
 
-    <section class="container home">
+    <!-- HOME SECTION -->
+
+    <section id="home" class="box">
         <article class="home-container">
-            <h1>Name and surname</h1>
-            <h2>profession</h2>
+            <h1>Linces</h1>
+            <h2>home</h2>
         </article>
     </section>
 
+    <!-- SHOP SECTION -->
+
+    <section id="shop" class="box">
+        <article class="shop-container">
+
+            <!-- Search -->
+
+            <form class="search d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+            <!-- Filters -->
+
+            <div class="filter-container">
+                <div class="filter">
+                    <input type="checkbox" id="laptop">
+                    <label for="laptop">Laptop</label>
+                </div>
+                <div class="filter">
+                    <input type="checkbox" id="printers">
+                    <label for="printers">Printers</label>
+                </div>
+                <div class="filter">
+                    <input type="checkbox" id="software">
+                <label for="software">Software</label>
+                </div>
+                <div class="filter">
+                    <button class="btn btn-outline-success" type="submit">Filter</button>
+                </div>
+            </div>
+
+            <!-- Card 1 -->
+
+            <div class="card-container card_1">
+                <div class="card">
+                    <img src="images/shop/laptop_01.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">HP ENVY x360</h3>
+                        <h4 class="card-text">16 PRODUCTS</h4>
+                        <h5>Windows 11 Home - 8th generation Intel® Core™ processor - Easily converts into stand, tent, or tablet mode - Full-size backlit keyboard with numeric keypad</h5>
+                    </div>
+                    <div class="card-price">
+                        <span>Starting at <del>$839.99</del></span>
+                        <h4>$599.99</h4>
+                    </div>
+                    <div class="card-btn">
+                        <button href="#" class="btn btn-primary">ADD CART</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="card-container card_2">
+                <div class="card">
+                    <img src="images/shop/laptop_02.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">HP ENVY 16</h3>
+                        <h4 class="card-text">3 PRODUCTS</h4>
+                        <h5>Windows 11 Home - 12th generation Intel® Core™ processors - 16.1-inch; 16:10 aspect ratio display - Up to 9:45 hours battery life</h5>
+                    </div>
+                    <div class="card-price">
+                        <span>Starting at <del>$1,399.99</del></span>
+                        <h4>$999.99</h4>
+                    </div>
+                    <div class="card-btn">
+                        <button href="#" class="btn btn-primary">ADD CART</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+
+            <div class="card-container card_3">
+                <div class="card">
+                    <img src="images/shop/laptop_03.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">HP ENVY 15</h3>
+                        <h4 class="card-text">4 PRODUCTS</h4>
+                        <h5>Windows 11 Home - Intel® Core™ processors - 15-inch display with optional touchscreen - Up to 2 TB of storage</h5>
+                    </div>
+                    <div class="card-price">
+                        <span>Starting at <del>$949.99</del></span>
+                        <h4>$729.99</h4>
+                    </div>
+                    <div class="card-btn">
+                        <button href="#" class="btn btn-primary">ADD CART</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+
+            <div class="card-container card_4">
+                <div class="card">
+                    <img src="images/shop/impresora_01.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">HP DeskJet</h3>
+                        <h4 class="card-text">6 PRODUCTS</h4>
+                        <h5>Reliable, easy-to-use printers for everyday printing</h5>
+                    </div>
+                    <div class="card-price">
+                        <span>Starting at <del>$84.99</del></span>
+                        <h4>$49.99</h4>
+                    </div>
+                    <div class="card-btn">
+                        <button href="#" class="btn btn-primary">ADD CART</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+
+            <div class="card-container card_5">
+                <div class="card">
+                    <img src="images/shop/impresora_02.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">HP ENVY</h3>
+                        <h4 class="card-text">10 PRODUCTS</h4>
+                        <h5>Versatile all-in-ones with the lastest photo and mobile printing innovation</h5>
+                    </div>
+                    <div class="card-price">
+                        <span>Starting at <del>$169.99</del></span>
+                        <h4>$119.99</h4>
+                    </div>
+                    <div class="card-btn">
+                        <button href="#" class="btn btn-primary">ADD CART</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+
+            <div class="card-container card_6">
+                <div class="card">
+                    <img src="images/shop/impresora_03.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">HP OficeJet Pro</h3>
+                        <h4 class="card-text">2 PRODUCTS</h4>
+                        <h5>Full-featured printers for a productive office</h5>
+                    </div>
+                    <div class="card-price">
+                        <span>Starting at <del>$221.99</del></span>
+                        <h4>$169.99</h4>
+                    </div>
+                    <div class="card-btn">
+                        <button href="#" class="btn btn-primary">ADD CART</button>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- CONTACT US SECTION -->
+
+    <section id="contact-us" class="box">
+        <article></article>
+    </section>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>

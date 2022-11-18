@@ -1,0 +1,233 @@
+/* SHOP */
+
+#shop {
+    padding: 22px;
+    .shop-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 0.1fr) repeat(2, 1fr);
+        grid-template-areas:
+        "search search search"
+        "filter filter filter"
+        "card_1 card_2 card_3"
+        "card_4 card_5 card_6";
+        .search {
+            grid-area: search;
+            .btn {
+                border: 2px solid $primary-color;
+                background-color: $primary-color;
+                color: $sidebar-color;
+                &:hover {
+                    background-color: $sidebar-color;
+                    color: $primary-color;
+                }
+            }
+        }
+        .filter-container {
+            grid-area: filter;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 22px;
+            .filter {
+                padding: 0 22px;
+                input {
+                    display: inline;
+                }
+                label {
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+                .btn {
+                    border: 2px solid $primary-color;
+                    background-color: $primary-color;
+                    color: $sidebar-color;
+                    &:hover {
+                        background-color: $sidebar-color;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+        @for $i from 1 through 6 {
+            .card_#{$i} {
+                grid-area: card_#{$i};
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .card {
+            height: 500px; width: 250px;
+            background-color: $color-body;
+            margin-top: 22px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 80%;
+            }
+            .card-body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .card-title {
+                    font-size: 22px;
+                    font-weight: 400;
+                }
+                .card-text {
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+                h5 {
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-align: center;
+                }
+            }   
+            .card-price {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                span {
+                    font-size: 12px;
+                }
+                h4 {
+                    font-size: 20px;
+                }
+            }
+            .card-btn {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .btn {
+                    width: 100%;
+                    background-color: $primary-color;
+                    border: 1px solid $primary-color;
+                    font-weight: bold;
+                    transition: $tran-04;
+                    &:hover {
+                        background-color: $primary-color-hover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1000px){
+
+    #shop {
+        .shop-container {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 0.1fr) repeat(3, 1fr);
+            grid-template-areas:
+            "search search"
+            "filter filter"
+            "card_1 card_2"
+            "card_4 card_3"
+            "card_5 card_6";
+        } 
+    }
+}
+
+@media screen and (max-width:768px){
+
+    #shop {
+        .shop-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 0.1fr) repeat(6, 1fr);
+            grid-template-areas:
+            "search"
+            "filter"
+            "card_1"
+            "card_2"
+            "card_4"
+            "card_3"
+            "card_5"
+            "card_6";
+            .filter-container {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 22px;
+                .filter {
+                    padding: 22px 0;
+                    width: 100px;
+                    input {
+                        display: inline;
+                    }
+                    label {
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                    .btn {
+                        width: 80%;
+                    }
+                }
+            }
+        } 
+    }
+}
+
+@media screen and (max-width:400px) {
+
+    #shop {
+        .shop-container {
+            .card {
+                height: 450px; width: 100%;
+                .card-body {
+                    justify-content: flex-start;
+                    .card-title {
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                    .card-text {
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                    h5 {
+                        font-size: 12px;
+                        font-weight: 400;
+                        text-align: center;
+                    }
+                }   
+                .card-price {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    span {
+                        font-size: 12px;
+                    }
+                    h4 {
+                        font-size: 20px;
+                    }
+                }
+                .card-btn {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .btn {
+                        width: 100%;
+                        background-color: $primary-color;
+                        border: 1px solid $primary-color;
+                        font-weight: bold;
+                        transition: $tran-04;
+                        &:hover {
+                            background-color: $primary-color-hover;
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}

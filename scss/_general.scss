@@ -3,7 +3,25 @@
     padding: 0;
     box-sizing: border-box;
     body {
-        height: 100vh;
         background: $color-body;
+        padding: 0 20px;
+        .box {
+            background-color: $sidebar-color;
+            border-radius: 16px;
+            position: relative;
+            transition: $tran-04;
+            margin-top: 22px;
+            left: 88px;
+            width: calc(100% - 88px);
+        }
+    }
+}
+
+@media screen and (max-width:425px) {
+
+    * {
+        body {
+            padding: 0 10px;
+        }
     }
 }

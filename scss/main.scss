@@ -1,20 +1,12 @@
 /* VARIABLES */
 
-$color-body: #1E1E2C;
-$icon-color: #FFFFFF;
-$sidebar-color: #2D2D44;
-$color-primary: #11678b;
-$color-icon-light: #cacaca;
-$toogle-color: #DDDDDD;
-$text-color: #FFFFFF;
-
-/* $color-body: #E4E9F7;
-$icon-color: #000000;
+$color-body: #E4E9F7;
 $sidebar-color: #FFFFFF;
-$color-primary: #695CFE;
-$color-primary-light: #F6F5FF;
+$primary-color: rgb(74, 139, 214);
+$primary-color-hover: rgb(49, 108, 175);
+$primary-color-light: #F6F5FF;
 $toogle-color: #DDDDDD;
-$text-color: #707070; */
+$text-color: #707070;
 
 $tran-01: all 0.2s ease;
 $tran-02: all 0.3s ease;
@@ -28,3 +20,5 @@ $tran-04: all 0.5s ease;
 @import "sidebar";
 
 @import "home";
+
+@import "shop";

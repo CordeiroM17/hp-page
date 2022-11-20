@@ -101,7 +101,7 @@ input {
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        color: #F6F5FF;
+        color: #FFFFFF;
         font-size: 22px;
         cursor: pointer; }
     .sidebar header .menu-bar .menu {
@@ -210,8 +210,8 @@ input {
   #shop .shop-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 0.1fr) repeat(2, 1fr);
-    grid-template-areas: "search search search" "filter filter filter" "card_1 card_2 card_3" "card_4 card_5 card_6"; }
+    grid-template-rows: repeat(2, 0.1fr) repeat(4, 1fr);
+    grid-template-areas: "search search search" "filter filter filter" "card_1 card_2 card_3" "card_4 card_5 card_6" "card_7 card_8 card_9" "card_10 card_11 card_12"; }
     #shop .shop-container .search {
       grid-area: search; }
       #shop .shop-container .search .btn {
@@ -272,6 +272,36 @@ input {
       display: flex;
       justify-content: center;
       align-items: center; }
+    #shop .shop-container .card_7 {
+      grid-area: card_7;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    #shop .shop-container .card_8 {
+      grid-area: card_8;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    #shop .shop-container .card_9 {
+      grid-area: card_9;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    #shop .shop-container .card_10 {
+      grid-area: card_10;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    #shop .shop-container .card_11 {
+      grid-area: card_11;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    #shop .shop-container .card_12 {
+      grid-area: card_12;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
     #shop .shop-container .card {
       height: 500px;
       width: 250px;
@@ -291,7 +321,8 @@ input {
         justify-content: center; }
         #shop .shop-container .card .card-body .card-title {
           font-size: 22px;
-          font-weight: 400; }
+          font-weight: 400;
+          text-align: center; }
         #shop .shop-container .card .card-body .card-text {
           font-size: 14px;
           font-weight: bold; }
@@ -325,14 +356,14 @@ input {
 @media screen and (max-width: 1000px) {
   #shop .shop-container {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 0.1fr) repeat(3, 1fr);
-    grid-template-areas: "search search" "filter filter" "card_1 card_2" "card_4 card_3" "card_5 card_6"; } }
+    grid-template-rows: repeat(2, 0.1fr) repeat(6, 1fr);
+    grid-template-areas: "search search" "filter filter" "card_1 card_2" "card_4 card_3" "card_5 card_6" "card_7 card_8" "card_9 card_10" "card_11 card_12"; } }
 
 @media screen and (max-width: 768px) {
   #shop .shop-container {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 0.1fr) repeat(6, 1fr);
-    grid-template-areas: "search" "filter" "card_1" "card_2" "card_4" "card_3" "card_5" "card_6"; }
+    grid-template-rows: repeat(2, 0.1fr) repeat(12, 1fr);
+    grid-template-areas: "search" "filter" "card_1" "card_2" "card_4" "card_3" "card_5" "card_6" "card_7" "card_8" "card_9" "card_10" "card_11" "card_12"; }
     #shop .shop-container .filter-container {
       flex-direction: column;
       justify-content: center;

@@ -5,12 +5,14 @@
     .shop-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 0.1fr) repeat(2, 1fr);
+        grid-template-rows: repeat(2, 0.1fr) repeat(4, 1fr);
         grid-template-areas:
         "search search search"
         "filter filter filter"
         "card_1 card_2 card_3"
-        "card_4 card_5 card_6";
+        "card_4 card_5 card_6"
+        "card_7 card_8 card_9"
+        "card_10 card_11 card_12";
         .search {
             grid-area: search;
             .btn {
@@ -50,7 +52,7 @@
                 }
             }
         }
-        @for $i from 1 through 6 {
+        @for $i from 1 through 12 {
             .card_#{$i} {
                 grid-area: card_#{$i};
                 display: flex;
@@ -78,6 +80,7 @@
                 .card-title {
                     font-size: 22px;
                     font-weight: 400;
+                    text-align: center;
                 }
                 .card-text {
                     font-size: 14px;
@@ -126,13 +129,16 @@
     #shop {
         .shop-container {
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 0.1fr) repeat(3, 1fr);
+            grid-template-rows: repeat(2, 0.1fr) repeat(6, 1fr);
             grid-template-areas:
             "search search"
             "filter filter"
             "card_1 card_2"
             "card_4 card_3"
-            "card_5 card_6";
+            "card_5 card_6"
+            "card_7 card_8"
+            "card_9 card_10"
+            "card_11 card_12";
         } 
     }
 }
@@ -142,7 +148,7 @@
     #shop {
         .shop-container {
             grid-template-columns: 1fr;
-            grid-template-rows: repeat(2, 0.1fr) repeat(6, 1fr);
+            grid-template-rows: repeat(2, 0.1fr) repeat(12, 1fr);
             grid-template-areas:
             "search"
             "filter"
@@ -151,7 +157,13 @@
             "card_4"
             "card_3"
             "card_5"
-            "card_6";
+            "card_6"
+            "card_7"
+            "card_8"
+            "card_9"
+            "card_10"
+            "card_11"
+            "card_12";
             .filter-container {
                 flex-direction: column;
                 justify-content: center;

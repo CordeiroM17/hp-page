@@ -3,18 +3,8 @@
 #shop {
     padding: 22px;
     .shop-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 0.1fr) repeat(4, 1fr);
-        grid-template-areas:
-        "search search search"
-        "filter filter filter"
-        "card_1 card_2 card_3"
-        "card_4 card_5 card_6"
-        "card_7 card_8 card_9"
-        "card_10 card_11 card_12";
         .search {
-            grid-area: search;
+            display: inline;
             .btn {
                 border: 2px solid $primary-color;
                 background-color: $primary-color;
@@ -26,25 +16,29 @@
             }
         }
         .filter-container {
-            grid-area: filter;
+            display: inline;
             display: flex;
             justify-content: center;
             align-items: center;
+            justify-content: space-around;
+            flex-flow: wrap;
             margin-top: 22px;
             .filter {
-                padding: 0 22px;
+                padding: 22px;
                 input {
-                    display: inline;
+                    display: none;
+                    &:checked ~ label {
+                        background-color: $sidebar-color;
+                        color: $primary-color;
+                    }
                 }
                 label {
-                    text-transform: uppercase;
-                    font-size: 14px;
-                    font-weight: 400;
-                }
-                .btn {
+                    width: 100px;
                     border: 2px solid $primary-color;
                     background-color: $primary-color;
                     color: $sidebar-color;
+                    cursor: pointer;
+                    z-index: 20;
                     &:hover {
                         background-color: $sidebar-color;
                         color: $primary-color;
@@ -52,161 +46,40 @@
                 }
             }
         }
-        @for $i from 1 through 12 {
-            .card_#{$i} {
-                grid-area: card_#{$i};
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-        .card {
-            height: 500px; width: 250px;
-            background-color: $color-body;
-            margin-top: 22px;
-            padding: 22px;
+        .card-seccion {
+            height: 100%;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            img {
-                width: 80%;
-            }
-            .card-body {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                .card-title {
-                    font-size: 22px;
-                    font-weight: 400;
-                    text-align: center;
-                }
-                .card-text {
-                    font-size: 14px;
-                    font-weight: bold;
-                }
-                h5 {
-                    font-size: 14px;
-                    font-weight: 400;
-                    text-align: center;
-                }
-            }   
-            .card-price {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                span {
-                    font-size: 12px;
-                }
-                h4 {
-                    font-size: 20px;
-                }
-            }
-            .card-btn {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                .btn {
-                    width: 100%;
-                    background-color: $primary-color;
-                    border: 1px solid $primary-color;
-                    font-weight: bold;
-                    transition: $tran-04;
-                    &:hover {
-                        background-color: $primary-color-hover;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width:1000px){
-
-    #shop {
-        .shop-container {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 0.1fr) repeat(6, 1fr);
-            grid-template-areas:
-            "search search"
-            "filter filter"
-            "card_1 card_2"
-            "card_4 card_3"
-            "card_5 card_6"
-            "card_7 card_8"
-            "card_9 card_10"
-            "card_11 card_12";
-        } 
-    }
-}
-
-@media screen and (max-width:768px){
-
-    #shop {
-        .shop-container {
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(2, 0.1fr) repeat(12, 1fr);
-            grid-template-areas:
-            "search"
-            "filter"
-            "card_1"
-            "card_2"
-            "card_4"
-            "card_3"
-            "card_5"
-            "card_6"
-            "card_7"
-            "card_8"
-            "card_9"
-            "card_10"
-            "card_11"
-            "card_12";
-            .filter-container {
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-top: 22px;
-                .filter {
-                    padding: 22px 0;
-                    width: 100px;
-                    input {
-                        display: inline;
-                    }
-                    label {
-                        text-transform: uppercase;
-                        font-size: 14px;
-                        font-weight: 400;
-                    }
-                    .btn {
-                        width: 80%;
-                    }
-                }
-            }
-        } 
-    }
-}
-
-@media screen and (max-width:400px) {
-
-    #shop {
-        .shop-container {
+            flex-direction: row;
+            justify-content: space-around;
+            flex-flow: wrap;
             .card {
-                height: 450px; width: 100%;
+                height: 500px; width: 250px;
+                background-color: $color-body;
+                margin: 22px 10px 0 10px;
+                padding: 22px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 80%;
+                }
                 .card-body {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                     justify-content: flex-start;
                     .card-title {
-                        font-size: 14px;
+                        font-size: 22px;
                         font-weight: 400;
+                        text-align: center;
                     }
                     .card-text {
-                        font-size: 12px;
+                        font-size: 14px;
                         font-weight: bold;
                     }
                     h5 {
-                        font-size: 12px;
+                        font-size: 14px;
                         font-weight: 400;
                         text-align: center;
                     }
@@ -241,5 +114,17 @@
                 }
             }
         }
-    }  
+    }
+}
+
+@media screen and (max-width:400px) {
+    #shop {
+        .shop-container {
+            .card-seccion {
+                .card {
+                    height: 500px; width: 200px;   
+                }
+            }
+        }
+    }
 }

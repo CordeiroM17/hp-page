@@ -13,8 +13,8 @@
       position: relative;
       transition: all 0.5s ease;
       margin-top: 22px;
-      left: 88px;
-      width: calc(100% - 88px); }
+      width: calc(100% - 88px);
+      left: 88px; }
 
 @media screen and (max-width: 425px) {
   * body {
@@ -207,215 +207,98 @@ input {
 /* SHOP */
 #shop {
   padding: 22px; }
-  #shop .shop-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 0.1fr) repeat(4, 1fr);
-    grid-template-areas: "search search search" "filter filter filter" "card_1 card_2 card_3" "card_4 card_5 card_6" "card_7 card_8 card_9" "card_10 card_11 card_12"; }
-    #shop .shop-container .search {
-      grid-area: search; }
-      #shop .shop-container .search .btn {
-        border: 2px solid #4a8bd6;
-        background-color: #4a8bd6;
-        color: #FFFFFF; }
-        #shop .shop-container .search .btn:hover {
+  #shop .shop-container .search {
+    display: inline; }
+    #shop .shop-container .search .btn {
+      border: 2px solid #4a8bd6;
+      background-color: #4a8bd6;
+      color: #FFFFFF; }
+      #shop .shop-container .search .btn:hover {
+        background-color: #FFFFFF;
+        color: #4a8bd6; }
+  #shop .shop-container .filter-container {
+    display: inline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: wrap;
+    margin-top: 22px; }
+    #shop .shop-container .filter-container .filter {
+      padding: 22px; }
+      #shop .shop-container .filter-container .filter input {
+        display: none; }
+        #shop .shop-container .filter-container .filter input:checked ~ label {
           background-color: #FFFFFF;
           color: #4a8bd6; }
-    #shop .shop-container .filter-container {
-      grid-area: filter;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 22px; }
-      #shop .shop-container .filter-container .filter {
-        padding: 0 22px; }
-        #shop .shop-container .filter-container .filter input {
-          display: inline; }
-        #shop .shop-container .filter-container .filter label {
-          text-transform: uppercase;
-          font-size: 14px;
-          font-weight: 400; }
-        #shop .shop-container .filter-container .filter .btn {
-          border: 2px solid #4a8bd6;
-          background-color: #4a8bd6;
-          color: #FFFFFF; }
-          #shop .shop-container .filter-container .filter .btn:hover {
-            background-color: #FFFFFF;
-            color: #4a8bd6; }
-    #shop .shop-container .card_1 {
-      grid-area: card_1;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    #shop .shop-container .card_2 {
-      grid-area: card_2;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    #shop .shop-container .card_3 {
-      grid-area: card_3;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    #shop .shop-container .card_4 {
-      grid-area: card_4;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    #shop .shop-container .card_5 {
-      grid-area: card_5;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    #shop .shop-container .card_6 {
-      grid-area: card_6;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    #shop .shop-container .card_7 {
-      grid-area: card_7;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    #shop .shop-container .card_8 {
-      grid-area: card_8;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    #shop .shop-container .card_9 {
-      grid-area: card_9;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    #shop .shop-container .card_10 {
-      grid-area: card_10;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    #shop .shop-container .card_11 {
-      grid-area: card_11;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    #shop .shop-container .card_12 {
-      grid-area: card_12;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    #shop .shop-container .card {
+      #shop .shop-container .filter-container .filter label {
+        width: 100px;
+        border: 2px solid #4a8bd6;
+        background-color: #4a8bd6;
+        color: #FFFFFF;
+        cursor: pointer;
+        z-index: 20; }
+        #shop .shop-container .filter-container .filter label:hover {
+          background-color: #FFFFFF;
+          color: #4a8bd6; }
+  #shop .shop-container .card-seccion {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap; }
+    #shop .shop-container .card-seccion .card {
       height: 500px;
       width: 250px;
       background-color: #E4E9F7;
-      margin-top: 22px;
+      margin: 22px 10px 0 10px;
       padding: 22px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center; }
-      #shop .shop-container .card img {
+      #shop .shop-container .card-seccion .card img {
         width: 80%; }
-      #shop .shop-container .card .card-body {
+      #shop .shop-container .card-seccion .card .card-body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center; }
-        #shop .shop-container .card .card-body .card-title {
+        justify-content: flex-start; }
+        #shop .shop-container .card-seccion .card .card-body .card-title {
           font-size: 22px;
           font-weight: 400;
           text-align: center; }
-        #shop .shop-container .card .card-body .card-text {
+        #shop .shop-container .card-seccion .card .card-body .card-text {
           font-size: 14px;
           font-weight: bold; }
-        #shop .shop-container .card .card-body h5 {
+        #shop .shop-container .card-seccion .card .card-body h5 {
           font-size: 14px;
           font-weight: 400;
           text-align: center; }
-      #shop .shop-container .card .card-price {
+      #shop .shop-container .card-seccion .card .card-price {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center; }
-        #shop .shop-container .card .card-price span {
+        #shop .shop-container .card-seccion .card .card-price span {
           font-size: 12px; }
-        #shop .shop-container .card .card-price h4 {
+        #shop .shop-container .card-seccion .card .card-price h4 {
           font-size: 20px; }
-      #shop .shop-container .card .card-btn {
+      #shop .shop-container .card-seccion .card .card-btn {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center; }
-        #shop .shop-container .card .card-btn .btn {
+        #shop .shop-container .card-seccion .card .card-btn .btn {
           width: 100%;
           background-color: #4a8bd6;
           border: 1px solid #4a8bd6;
           font-weight: bold;
           transition: all 0.5s ease; }
-          #shop .shop-container .card .card-btn .btn:hover {
-            background-color: #316caf; }
-
-@media screen and (max-width: 1000px) {
-  #shop .shop-container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 0.1fr) repeat(6, 1fr);
-    grid-template-areas: "search search" "filter filter" "card_1 card_2" "card_4 card_3" "card_5 card_6" "card_7 card_8" "card_9 card_10" "card_11 card_12"; } }
-
-@media screen and (max-width: 768px) {
-  #shop .shop-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 0.1fr) repeat(12, 1fr);
-    grid-template-areas: "search" "filter" "card_1" "card_2" "card_4" "card_3" "card_5" "card_6" "card_7" "card_8" "card_9" "card_10" "card_11" "card_12"; }
-    #shop .shop-container .filter-container {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-top: 22px; }
-      #shop .shop-container .filter-container .filter {
-        padding: 22px 0;
-        width: 100px; }
-        #shop .shop-container .filter-container .filter input {
-          display: inline; }
-        #shop .shop-container .filter-container .filter label {
-          text-transform: uppercase;
-          font-size: 14px;
-          font-weight: 400; }
-        #shop .shop-container .filter-container .filter .btn {
-          width: 80%; } }
+          #shop .shop-container .card-seccion .card .card-btn .btn:hover {
+            background-color: #2d629e; }
 
 @media screen and (max-width: 400px) {
-  #shop .shop-container .card {
-    height: 450px;
-    width: 100%; }
-    #shop .shop-container .card .card-body {
-      justify-content: flex-start; }
-      #shop .shop-container .card .card-body .card-title {
-        font-size: 14px;
-        font-weight: 400; }
-      #shop .shop-container .card .card-body .card-text {
-        font-size: 12px;
-        font-weight: bold; }
-      #shop .shop-container .card .card-body h5 {
-        font-size: 12px;
-        font-weight: 400;
-        text-align: center; }
-    #shop .shop-container .card .card-price {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center; }
-      #shop .shop-container .card .card-price span {
-        font-size: 12px; }
-      #shop .shop-container .card .card-price h4 {
-        font-size: 20px; }
-    #shop .shop-container .card .card-btn {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      #shop .shop-container .card .card-btn .btn {
-        width: 100%;
-        background-color: #4a8bd6;
-        border: 1px solid #4a8bd6;
-        font-weight: bold;
-        transition: all 0.5s ease; }
-        #shop .shop-container .card .card-btn .btn:hover {
-          background-color: #316caf; } }
+  #shop .shop-container .card-seccion .card {
+    height: 500px;
+    width: 200px; } }

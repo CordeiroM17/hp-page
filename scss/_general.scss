@@ -5,6 +5,7 @@
     body {
         background: $color-body;
         padding: 0 20px;
+        transition: $tran-02;
         .box {
             background-color: $sidebar-color;
             border-radius: 16px;
@@ -13,6 +14,12 @@
             margin-top: 22px;
             width: calc(100% - 88px);
             left: 88px; 
+        }
+    }
+    .dark {
+        background: $dark-color-body;
+        .box {
+            background-color: $dark-sidebar-color;
         }
     }
 }

@@ -1,114 +1,117 @@
 /* SHOP */
 
-#shop {
-    padding: 22px;
-    .shop-container {
-        .search {
-            display: inline;
-            .btn {
-                border: 2px solid $primary-color;
-                background-color: $primary-color;
-                color: $sidebar-color;
-                &:hover {
-                    background-color: $sidebar-color;
-                    color: $primary-color;
-                }
-            }
-        }
-        .filter-container {
-            display: inline;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            justify-content: space-around;
-            flex-flow: wrap;
-            margin-top: 22px;
-            .filter {
-                padding: 22px;
-                input {
-                    display: none;
-                    &:checked ~ label {
-                        background-color: $sidebar-color;
-                        color: $primary-color;
-                    }
-                }
-                label {
-                    width: 100px;
+body {
+    #shop {
+        padding: 22px;
+        .shop-container {
+            .search {
+                display: inline;
+                .btn {
                     border: 2px solid $primary-color;
                     background-color: $primary-color;
                     color: $sidebar-color;
-                    cursor: pointer;
-                    z-index: 20;
                     &:hover {
                         background-color: $sidebar-color;
                         color: $primary-color;
                     }
                 }
             }
-        }
-        .card-seccion {
-            height: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            flex-flow: wrap;
-            .card {
-                height: 500px; width: 250px;
-                background-color: $color-body;
-                margin: 22px 10px 0 10px;
-                padding: 22px;
+            .filter-container {
+                display: inline;
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                img {
-                    width: 80%;
-                }
-                .card-body {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: flex-start;
-                    .card-title {
-                        font-size: 22px;
-                        font-weight: 400;
-                        text-align: center;
+                justify-content: space-around;
+                flex-flow: wrap;
+                margin-top: 22px;
+                .filter {
+                    padding: 22px;
+                    input {
+                        display: none;
+                        &:checked ~ label {
+                            background-color: $sidebar-color;
+                            color: $primary-color;
+                        }
                     }
-                    .card-text {
-                        font-size: 14px;
-                        font-weight: bold;
-                    }
-                    h5 {
-                        font-size: 14px;
-                        font-weight: 400;
-                        text-align: center;
-                    }
-                }   
-                .card-price {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    span {
-                        font-size: 12px;
-                    }
-                    h4 {
-                        font-size: 20px;
-                    }
-                }
-                .card-btn {
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    .btn {
-                        width: 100%;
+                    label {
+                        width: 100px;
+                        border: 2px solid $primary-color;
                         background-color: $primary-color;
-                        border: 1px solid $primary-color;
-                        font-weight: bold;
-                        transition: $tran-04;
+                        color: $sidebar-color;
+                        cursor: pointer;
+                        z-index: 20;
                         &:hover {
-                            background-color: $primary-color-hover;
+                            background-color: $sidebar-color;
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+            .card-section {
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                flex-flow: wrap;
+                .card {
+                    height: 500px; width: 250px;
+                    background-color: $color-body;
+                    margin: 22px 10px 0 10px;
+                    padding: 22px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        width: 80%;
+                    }
+                    .card-body {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: flex-start;
+                        .card-title {
+                            font-size: 22px;
+                            font-weight: 400;
+                            text-align: center;
+                        }
+                        .card-text {
+                            font-size: 14px;
+                            font-weight: bold;
+                        }
+                        h5 {
+                            font-size: 14px;
+                            font-weight: 400;
+                            text-align: center;
+                            color: $text-color;
+                        }
+                    }   
+                    .card-price {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        span {
+                            font-size: 12px;
+                        }
+                        h4 {
+                            font-size: 20px;
+                        }
+                    }
+                    .card-btn {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .btn {
+                            width: 100%;
+                            background-color: $primary-color;
+                            border: 2px solid $primary-color;
+                            font-weight: bold;
+                            transition: $tran-03;
+                            &:hover {
+                                background-color: $primary-color-hover;
+                            }
                         }
                     }
                 }
@@ -118,11 +121,86 @@
 }
 
 @media screen and (max-width:400px) {
+    body {
+        #shop {
+            .shop-container {
+                .card-section {
+                    .card {
+                        height: 500px; width: 200px;   
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dark {
     #shop {
         .shop-container {
-            .card-seccion {
+            .search {
+                input {
+                    background-color: $dark-color-body;
+                    border: 1px solid $dark-text-color;
+                    transition: $tran-04;
+                    &:focus {
+                        -moz-box-shadow: 0px 0px 13px -3px rgba(255,255,255,0.75);
+                        -webkit-box-shadow: 0px 0px 13px -3px rgba(255,255,255,0.75);
+                        box-shadow: 0px 0px 13px -3px rgba(255,255,255,0.75);
+                    }
+                }
+                .btn {
+                    &:hover {
+                        background-color: $dark-sidebar-color;
+                        color: $dark-text-color;
+                    }
+                }
+            }
+            .filter-container {
+                .filter {
+                    input {
+                        &:checked ~ label {
+                            background-color: $dark-sidebar-color;
+                            color: $dark-text-color;
+                        }
+                    }
+                    label {
+                        &:hover {
+                            background-color: $dark-sidebar-color;
+                            color: $dark-text-color;
+                        }
+                    }
+                }
+            }
+            .card-section {
                 .card {
-                    height: 500px; width: 200px;   
+                    background-color: $dark-color-body;
+                    .card-body {
+                        .card-title {
+                            color: $dark-toogle-color;
+                        }
+                        .card-text {
+                            color: $dark-toogle-color;
+                        }
+                        h5 {
+                            color: $dark-text-color;
+                        }
+                    }
+                    .card-price {
+                        span {
+                            color: $dark-text-color;
+                        }
+                        h4 {
+                            color: $dark-toogle-color;
+                        }
+                    }
+                    .card-btn {
+                        .btn {
+                            &:hover {
+                                background-color: $dark-sidebar-color;
+                                color: $dark-text-color;
+                            }
+                        }
+                    }
                 }
             }
         }

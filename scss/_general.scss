@@ -2,8 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    .light {
+        background-color: $color-body;
+    }
     body {
-        background: $color-body;
         padding: 0 20px;
         transition: $tran-02;
         .box {

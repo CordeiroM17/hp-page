@@ -24,6 +24,24 @@ body {
                             .text {
                                 display: inline;
                             }
+                            #cart_cont {
+                                position: absolute;
+                                right: 20px;
+                                height: 25px; width: 25px;
+                                background-color: $primary-color;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 6px;
+                                color: $sidebar-color;
+                                font-size: 20px;
+                                cursor: pointer;
+                                transition: $tran-04;
+                            }
+                            &:hover #cart_cont {
+                                background-color: $primary-color-light;
+                                color: $primary-color;
+                            }
                         }
                     }
                     .toggle-switch {
@@ -70,7 +88,6 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        border-right: 2px solid $primary-color;
         header {
             position: relative;
             .image-text {
@@ -167,6 +184,22 @@ body {
                             &:hover .text {
                                 color: $primary-color-light;
                             }
+                            #cart_cont {
+                                position: absolute;
+                                right: -2px;
+                                height: 25px; width: 25px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 6px;
+                                color: $text-color;
+                                font-size: 20px;
+                                cursor: pointer;
+                                transition: $tran-04;
+                            }
+                            &:hover #cart_cont {
+                                color: $primary-color-light;
+                            }
                         }
                     }
                     .toggle-switch {
@@ -215,13 +248,13 @@ body {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
-                margin-bottom: 10px;
                 a {
                     display: flex;
                     height: 50px;
                     transition: $tran-04;
                     text-decoration: none;
                     border-radius: 6px;
+                    margin-bottom: 10px;
                     i {
                         display: flex;
                         align-items: center;
@@ -248,9 +281,28 @@ body {
 
 /* DARK SIDEBAR  */
 .dark {
+    input {
+        &:checked ~ .close {
+            .menu-bar {
+                .menu {
+                    .nav-link {
+                        a {
+                            #cart_cont {
+                                background-color: $dark-text-color;
+                                color: $dark-sidebar-color;
+                            }
+                            &:hover #cart_cont {
+                                background-color: $dark-sidebar-color;
+                                color: $dark-text-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     .sidebar {
         background-color: $dark-sidebar-color;
-        border-right: 2px solid $dark-text-color;
         header {
             .image-text {
                 .text {
@@ -283,6 +335,12 @@ body {
                                 color: $dark-text-color;
                             }
                             &:hover .text {
+                                color: $dark-primary-color-light;
+                            }
+                            #cart_cont {
+                                color: $dark-text-color;
+                            }
+                            &:hover #cart_cont {
                                 color: $dark-primary-color-light;
                             }
                         }
